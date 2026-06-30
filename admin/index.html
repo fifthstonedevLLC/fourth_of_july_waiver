@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Waiver Check-In — Admin</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/admin/admin.css" />
+</head>
+<body>
+  <main class="page">
+    <header class="banner">
+      <div class="banner-flag" aria-hidden="true">🔎</div>
+      <h1>Waiver Check-In</h1>
+      <p class="banner-sub">Verify a signed waiver by adult or child name</p>
+    </header>
+
+    <section class="form">
+      <label for="search" class="search-label">Search by name</label>
+      <input
+        type="search"
+        id="search"
+        class="search-input"
+        placeholder="Type an adult or child's name…"
+        autocomplete="off"
+        autofocus
+      />
+      <p class="hint" id="status">Start typing to search.</p>
+      <div id="results" class="results"></div>
+    </section>
+
+    <section class="form feed" id="feed-section">
+      <div class="feed-head">
+        <h2 class="feed-title">Recent sign-ins</h2>
+        <span class="feed-live" id="feed-live" title="Updates automatically">● Live</span>
+      </div>
+      <p class="hint" id="feed-status">Loading…</p>
+      <div id="feed-results" class="results"></div>
+      <div class="pager" id="pager" hidden>
+        <button type="button" id="prev-page" class="pager-btn">‹ Newer</button>
+        <span class="pager-info" id="pager-info"></span>
+        <button type="button" id="next-page" class="pager-btn">Older ›</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="/admin/admin.js"></script>
+</body>
+</html>
