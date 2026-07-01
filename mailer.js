@@ -42,12 +42,12 @@ async function emailWaiverCopy({ to, adultName, pdfBuffer, pdfFilename }) {
   await transporter.sendMail({
     from: MAIL_FROM,
     to,
-    subject: '4th of July Celebration — Your Signed Liability Waiver',
+    subject: '2026 4th of July Celebration — Your Signed Liability Waiver',
     text:
       `Hi ${adultName},\n\n` +
-      'Thank you for signing the liability waiver for the 4th of July Celebration. ' +
-      'A copy of your signed waiver is attached for your records.\n\n' +
-      'See you at the Event!',
+      'Thank you for signing the liability waiver for our 4th of July Celebration. ' +
+      'A copy of your signed waiver is attached for your records!\n\n' +
+      'We hope you enjoy the event!',
     attachments: [
       {
         filename: pdfFilename,
